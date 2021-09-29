@@ -1,0 +1,21 @@
+canvas{
+    border: 1px solid black;
+    flex:4;
+}
+#dessin{
+    display: flex;
+}
+#palette, #outil{
+    flex:1;
+}
+#palette div, #outils div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#palette div img, #outils div img{
+    width: 60%;
+}
