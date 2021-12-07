@@ -42,18 +42,18 @@ class Dessin{
             }
         })
 
-        // this.canvas.addEventListener('touchmove', (e) =>{
-        //     e.preventDefault();
-        //     if(this.draw){
-        //         let currX = (e.touches[0].clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
-        //         let currY = (e.touches[0].clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
+        this.canvas.addEventListener('touchmove', (e) =>{
+            e.preventDefault();
+            if(this.draw){
+                let currX = (e.touches[0].clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
+                let currY = (e.touches[0].clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
 
-        //         this.dessine(this.prevX, this.prevY, currX, currY);
+                this.dessine(this.prevX, this.prevY, currX, currY);
 
-        //         this.prevX = currX;
-        //         this.prevY = currY;
-        //     }
-        // })
+                this.prevX = currX;
+                this.prevY = currY;
+            }
+        })
 
         this.canvas.addEventListener('mouseup', () => {
             this.draw = false;
