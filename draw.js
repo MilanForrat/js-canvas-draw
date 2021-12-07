@@ -26,7 +26,7 @@ class Dessin{
             this.draw = true;
 
             this.prevX = (e.touches[0].clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
-            this.prevY = (etouches[0].clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
+            this.prevY = (e.touches[0].clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
         })
 
 
