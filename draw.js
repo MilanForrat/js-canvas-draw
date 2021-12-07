@@ -25,8 +25,8 @@ class Dessin{
             e.preventDefault();
             this.draw = true;
 
-            this.prevX = (e.clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
-            this.prevY = (e.clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
+            this.prevX = (e.touches[0].clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
+            this.prevY = (etouches[0].clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
         })
 
 
@@ -45,8 +45,8 @@ class Dessin{
         this.canvas.addEventListener('touchmove', (e) =>{
             e.preventDefault();
             if(this.draw){
-                let currX = (e.clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
-                let currY = (e.clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
+                let currX = (e.touches[0].clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
+                let currY = (e.touches[0].clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
 
                 this.dessine(this.prevX, this.prevY, currX, currY);
 
@@ -60,6 +60,11 @@ class Dessin{
         })
 
         this.canvas.addEventListener('mouseout', () => {
+            this.draw = false;
+        })
+
+        this.canvas.addEventListener('touchend', (e) => {
+            e.preventDefault();
             this.draw = false;
         })
     }
