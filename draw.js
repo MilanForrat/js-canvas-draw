@@ -22,6 +22,7 @@ class Dessin{
         })
 
         this.canvas.addEventListener('touchstart', (e) =>{
+            e.preventDefault();
             this.draw = true;
 
             this.prevX = (e.clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
@@ -42,6 +43,7 @@ class Dessin{
         })
 
         this.canvas.addEventListener('touchmove', (e) =>{
+            e.preventDefault();
             if(this.draw){
                 let currX = (e.clientX - this.canvas.offsetLeft) * canvasWidth / this.canvas.clientWidth;
                 let currY = (e.clientY - this.canvas.offsetTop) * canvasHeight / this.canvas.clientHeight;
