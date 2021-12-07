@@ -15,6 +15,7 @@ canvas{
     align-items: center;
     border-radius: 5px;
     margin: 0px 0px 2px 2px;
+    touch-action: manipulation;
 }
 #palette div img, #outils div img{
     width: 60%;
