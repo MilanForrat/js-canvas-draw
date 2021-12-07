@@ -10,21 +10,26 @@
 <body>
     <section id="dessin">
         <canvas id="feuille" width="400" height="400"></canvas>
-        <div id="palette">
-            <div data-color="blue"></div>
-            <div data-color="green"></div>
-            <div data-color="yellow"></div>
-            <div data-color="red"></div>
-            <div data-color="black"></div>
-            <div data-color="white"></div>
-        </div>
-        <div id="outils">
-            <div><img src="./icons/plus.svg" alt=""></div>
-            <div><img src="./icons/minus.svg" alt=""></div>
-            <div><img src="./icons/eraser.svg" alt=""></div>
-            <div><img src="./icons/cross.svg" alt=""></div>
+        <div id="pack-outils">
+            <div id="palette">
+                <div data-color="blue"></div>
+                <div data-color="green"></div>
+                <div data-color="yellow"></div>
+                <div data-color="red"></div>
+                <div data-color="black"></div>
+                <div data-color="purple"></div>
+            </div>
+            <div id="outils">
+                <div id="plus"><img src="./icons/plus.svg" alt=""></div>
+                <div id="moins"><img src="./icons/minus.svg" alt=""></div>
+                <div id="gomme"><img src="./icons/eraser.svg" alt=""></div>
+                <div id="effacer"><img src="./icons/cross.svg" alt=""></div>
+            </div>
         </div>
     </section>
+    <div id="choix-outils"></div>
+    <div id="choix-taille"></div>
+    <div id="choix-couleur"></div>
     <script src="./draw.js"></script>
     <script src="./app.js"></script>
 </body>
