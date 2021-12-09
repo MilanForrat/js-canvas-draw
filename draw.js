@@ -106,10 +106,12 @@ class Dessin{
     }
 
     save(){
-        let image = this.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
-        let anchor = document.createElement('a');
-        anchor.setAttribute('download', 'myFilename.png');
-        anchor.setAttribute('href', image);
-        anchor.click();
+        if(confirm("Souhaitez-vous télécharger votre dessin au format PNG ?")){
+            let image = this.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+            let anchor = document.createElement('a');
+            anchor.setAttribute('download', 'Dessin.png');
+            anchor.setAttribute('href', image);
+            anchor.click();   
+        }    
     }
 }
