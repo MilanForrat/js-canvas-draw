@@ -37,7 +37,6 @@ window.onload = () => {
         document.querySelector('#effacer').style.cursor ="pointer";
     })
     sliderInput.addEventListener("change", function() {
-        console.log(sliderInput.value);
         canvas.ctx.lineWidth = sliderInput.value;
         canvas.insertTaille(canvas.ctx.lineWidth);
     }, false);

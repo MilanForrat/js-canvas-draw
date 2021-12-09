@@ -8,8 +8,6 @@ class Dessin{
         this.canvasWidth = 400;
         this.canvasHeight = 400;
         this.canvas = document.querySelector(canvas);
-        // je vérifie que je récupère bien le canvas HTML
-        // console.log(this.canvas);
         this.ctx = this.canvas.getContext("2d");
         this.ctx.strokeStyle = "black";
         this.ctx.lineWidth = 1;
