@@ -107,9 +107,10 @@ class Dessin{
 
     save(){
         if(confirm("Souhaitez-vous télécharger votre dessin au format PNG ?")){
+            let filename = prompt('Veuillez saisir le nom du fichier à enregistrer');
             let image = this.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
             let anchor = document.createElement('a');
-            anchor.setAttribute('download', 'Dessin.png');
+            anchor.setAttribute('download', `${filename}.png`);
             anchor.setAttribute('href', image);
             anchor.click();   
         }    
