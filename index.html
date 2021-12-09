@@ -9,7 +9,16 @@
 </head>
 <body>
     <section id="dessin">
-        <canvas id="feuille" width="400" height="400"></canvas>
+        <div class="flex">
+            <canvas id="feuille" width="400" height="400"></canvas>
+            <span id="slider-pinceau">Taille du pinceau</span>
+            <div class="slider-groupe">
+                <span>0</span>
+                <input type="range" min="1" max="100" value="1" class="slider" id="stroke-plus">
+                <span>100</span>
+            </div>
+            
+        </div>
         <div id="pack-outils">
             <div id="palette">
                 <div data-color="blue"></div>
@@ -20,8 +29,7 @@
                 <div data-color="purple"></div>
             </div>
             <div id="outils">
-                <div id="plus"><img src="./icons/plus.svg" alt=""></div>
-                <div id="moins"><img src="./icons/minus.svg" alt=""></div>
+                <div id="save"><img src="./icons/save.svg" alt=""></div>
                 <div id="gomme"><img src="./icons/eraser.svg" alt=""></div>
                 <div id="effacer"><img src="./icons/cross.svg" alt=""></div>
             </div>
@@ -34,3 +42,7 @@
     <script src="./app.js"></script>
 </body>
 </html>
+<!--
+- chercher à sauvegarder le dessin
+- proposer d'autres couleurs
+-->

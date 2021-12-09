@@ -12,7 +12,7 @@ class Dessin{
         // console.log(this.canvas);
         this.ctx = this.canvas.getContext("2d");
         this.ctx.strokeStyle = "black";
-        this.ctx.lineWidth = 2;
+        this.ctx.lineWidth = 1;
 
         this.canvas.addEventListener('mousedown', (e) =>{
             this.draw = true;
@@ -99,19 +99,17 @@ class Dessin{
         this.canvas.style.cursor ="url('./pointer/eraser.svg') 0 20, auto";
     }
 
-    biggerStroke(){
-        this.ctx.lineWidth++;
-    }
-
-    smallerStroke(){
-        this.ctx.lineWidth = (this.ctx.lineWidth > 1) ? this.ctx.lineWidth -1 : 1; 
-    }
-
     erase(){
         if(confirm("Voulez vous vraiment effacer votre dessin ?")){
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         }
     }
 
-
+    save(){
+        let image = this.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+        let anchor = document.createElement('a');
+        anchor.setAttribute('download', 'myFilename.png');
+        anchor.setAttribute('href', image);
+        anchor.click();
+    }
 }
